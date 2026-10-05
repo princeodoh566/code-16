@@ -22,6 +22,7 @@ Code 16 is a team of TS Academy Frontend Development learners working together t
 - Ummu-l-khayr — @Riiree
 - Christiana — @tiana9495-debug
 - Muhammed-Awal — @Focus-06
+- Memunat — @Memunat-hub
 
 ## Technologies Used
 
