@@ -2,9 +2,11 @@
 
 Group 16 Frontend Capstone Project
 
-## Project Overview
+### About the Project
 
-[Brief description of the application]
+Code 16 is a collaborative frontend capstone project developed as part of the TS Academy Hajime Cohort Frontend Development program.
+
+The project implements the provided design and uses the provided Planet API to display and interact with planetary data.
 
 ## Team Members
 
@@ -23,14 +25,16 @@ Group 16 Frontend Capstone Project
 - Christiana — @tiana9495-debug
 - Muhammed-Awal — @Focus-06
 
-## Technologies
+## Technologies Used
 
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
 - Fetch API
+- JSON
 - Git
 - GitHub
+- Vercel
 
 ## Components and Contributions
 
@@ -38,9 +42,12 @@ Group 16 Frontend Capstone Project
 |---|---|
 | ... | ... |
 
-## Getting Started
+### How to Run Locally
 
-[Setup instructions]
+1. Clone the repository.
+2. Open the project folder.
+3. Open `index.html` using a local development environment.
+4. Run the project and test the application.
 
 ## Git Workflow
 
