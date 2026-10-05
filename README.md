@@ -9,8 +9,8 @@ Group 16 Frontend Capstone Project
 ## Team Members
 
 - Adeola — @Mr-Adeola
-- Prince — @princeodoh566
-- Comfort — @Macomi27
+- Prince — @princeodoh566 -Group Leader
+- Comfort — @Macomi27 - Assistant Group Leader 
 - Sheriff — @allabouttobi
 - Skipper — @harrydev-pro
 - Nathanael — @Nathanaelfowler
