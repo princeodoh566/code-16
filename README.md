@@ -4,9 +4,7 @@ Group 16 Frontend Capstone Project
 
 ### About the Project
 
-Code 16 is a collaborative frontend capstone project developed as part of the TS Academy Hajime Cohort Frontend Development program.
-
-The project implements the provided design and uses the provided Planet API to display and interact with planetary data.
+Code 16 is a team of TS Academy Frontend Development learners working together to build and deploy a responsive web application using HTML, CSS, JavaScript and API integration.
 
 ## Team Members
 
