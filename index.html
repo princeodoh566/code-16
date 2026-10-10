@@ -17,6 +17,54 @@
   <body data-theme="light">
     <!-- HEADER -->
 
+    <header>
+      <!-- Navigation containing decorative elements & actions -->
+      <nav class="nav-container">
+        <!-- Logo Link -->
+        <a
+          href="./assets/logo_black.svg"
+          class="logo-link"
+          aria-label="Planet Explorer Home"
+        >
+        </a>
+        <!-- Decorative SVG (Hidden from screen readers) -->
+        <svg
+          class="decor-svg"
+          aria-hidden="true"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://w3.org"
+        >
+          <!-- Your specific decorative SVG shapes/paths go here -->
+          <circle
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            stroke-width="2"
+          />
+        </svg>
+
+        <!-- Theme Toggle Button -->
+        <button
+          type="button"
+          class="theme-toggle"
+          aria-label="Toggle dark theme"
+          aria-pressed="false"
+        >
+          <!-- Task requirement: Inner text "DARK" -->
+          <span class="theme-text">DARK</span>
+
+          <!-- Task requirement: theme-icon element wrapping the crescent moon -->
+          <span class="theme-icon" aria-hidden="true">
+            <img src="./assets/Theme_Icon.svg" alt="" width="24" height="24" />
+          </span>
+        </button>
+      </nav>
+    </header>
+
     <!-- MAIN -->
 
     <!-- FOOTER -->
