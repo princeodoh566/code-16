@@ -1,1 +1,22 @@
+/* ===== GLOBAL: Nathanael (3.1) ===== */
+:root{
+  --page-bg:#f5f8ff;--surface:#fff;--inset:#f4f7ff;
+  --text:#2b3442;--muted:#4b689b;--desc:#7f94b8;--icon:#141d2f;
+  --accent:#0d79ff;--accent-hover:#5ba9ff;--danger:#f74646;
+  --shadow:0 14px 40px rgba(111,135,214,.2);--search-border:#cfe0ff;
+  --heading:#1a4aa8;--tbl-head:#1a4aa8;--tbl-head-text:#fff;--tbl-group:#d0e2ff;
+  --tbl-cell:#f2f7ff;--tbl-line:#fff;--tbl-text:#141d2f;--tbl-outer:transparent;
+  --font-body:"Inter",system-ui,sans-serif;--font-mono:"Space Mono",monospace;
+}
 
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{min-width:320px;background:var(--page-bg);color:var(--text);font-family:var(--font-body);line-height:1.6;transition:background-color .25s,color .25s}
+button,input{font:inherit}
+button{cursor:pointer}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.page-container{width:min(730px,calc(100% - 40px));margin-inline:auto}
+.is-hidden{display:none!important}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+main{display:flex;flex-direction:column;gap:32px;padding-block:20px 70px}
