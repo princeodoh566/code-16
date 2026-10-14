@@ -1,37 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Explore planets in the solar system using live planet data." />
-        <title>Planet Explorer | Code 16</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;
-        800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="css/style.css" />
-    </head>
-    <body data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore planets in the solar system using live planet data."
+    />
+    <title>Planet Explorer | Code 16</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;
+        800&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-theme="light">
+    <!-- ===== HEADER: Adeola (2.2) ===== -->
 
-        <!-- ===== HEADER: Adeola (2.2) ===== -->
+    <main id="top" class="page-container">
+      <!-- ===== SEARCH: Fuhad (2.3) ===== -->
 
+      <!-- ===== PLANET CARD, LOADING, ERROR: Christiana (2.4, 2.5) ===== -->
 
-        <main id="top" class="page-container">
+      <!-- ===== TABLE: Skipper (2.6) ===== -->
+      <section class="table-section" aria-labelledby="table-heading">
+        <h2 id="table-heading">Planetary Facts at a Glance</h2>
+        <p class="table-intro">
+          Below is a comparative table of major planets in our solar system. The
+          data highlights key physical properties used by astronomers and
+          researchers worldwide.
+        </p>
+        <p class="table-source">
+          Data about the planets of our solar system (Planetary facts taken from
+          NASA)
+        </p>
+        <div class="table-wrapper">
+          <table class="planet-table">
+            <thead>
+              <tr>
+                <th colspan="2" scope="col">
+                  <span class="sr-only"></span>
+                </th>
+                <th scope="col">Name</th>
+                <th scope="col" class="col-mass">Mass (10²⁴ kg)</th>
+                <th scope="col">Diameter (km)</th>
+              </tr>
+            </thead>
+            <tbody id="planet-table-body"></tbody>
+          </table>
+        </div>
+      </section>
+      
+    </main>
 
-        <!-- ===== SEARCH: Fuhad (2.3) ===== -->
+    <!-- ===== FOOTER: Blessing (2.7) ===== -->
 
-
-        <!-- ===== PLANET CARD, LOADING, ERROR: Christiana (2.4, 2.5) ===== -->
-
-
-        <!-- ===== TABLE: Skipper (2.6) ===== -->
-
-        </main>
-
-
-        <!-- ===== FOOTER: Blessing (2.7) ===== -->
-
-
-        <script src="js/script.js"></script>
-    </body>
+    <script src="js/script.js"></script>
+  </body>
 </html>
