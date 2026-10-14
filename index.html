@@ -87,7 +87,11 @@
 
         <!-- ===== PLANET CARD, LOADING, ERROR: Christiana (2.4, 2.5) ===== -->
             <section class="planet-section" aria-label="Planet information">
-  <!-- loading and error states go here (task 2.5) -->
+              <div id="loading-state" class="status-message" aria-live="polite">Loading planet data…</div>
+<div id="error-state" class="status-message error-box is-hidden" role="alert">
+  <p>We could not load the planet data. Please check your internet connection and try again.</p>
+  <button id="retry-button" type="button">Try again</button>
+</div>
   <article id="planet-card" class="planet-card is-hidden"></article>
 </section>
 
