@@ -1,1 +1,13 @@
+/* === HEADER: Nathanael (3.2) ==== */
 
+.site-header{padding-block:30px 20px}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{display:inline-flex;align-items:center;gap:4px;color:var(--text)}
+.logo-mark{width:84px;height:auto;flex:none}
+.logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-text strong{font-size:2.25rem;font-weight:700;letter-spacing:-.06em;line-height:.9}
+.logo-text small{display:none;font-size:.5rem;letter-spacing:.3em;color:var(--muted);margin-top:4px;white-space:nowrap}
+.theme-toggle{display:inline-flex;align-items:center;gap:14px;padding:8px 12px;border:3px solid transparent;border-radius:10px;background:transparent;color:var(--muted)}
+.theme-toggle-text{font-family:var(--font-mono);font-size:.8rem;font-weight:700;letter-spacing:.15em}
+.theme-icon{display:grid;width:20px;height:20px;place-items:center}
+.theme-icon svg{width:20px;height:20px}
