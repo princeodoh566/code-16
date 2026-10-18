@@ -13,75 +13,11 @@
 .theme-icon svg{width:20px;height:20px}flow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
 main{display:flex;flex-direction:column;gap:32px;padding-block:20px 70px}
 
-/* Search Component Styles */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
+/* Search Component Styles :fuhad task 3.4 */
 
-.search-input-wrapper {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    align-items: center;
-    gap: 8px;
-    width: 100%;
-    max-width: 28rem;
-    box-sizing: border-box;
-    padding: 4px 5px 4px 12px;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    background: #fff;
-}
-
-.search-input-wrapper svg {
-    width: 16px;
-    height: 16px;
-    color: #3788ad;
-}
-
-.search-input-wrapper input {
-    min-width: 0;
-    padding: 8px 0;
-    border: 0;
-    outline: none; /* Prevents default focus border inside the wrapper */
-    background: transparent;
-    color: #263746;
-    font-family: "Inter", sans-serif;
-    font-size: 12px;
-}
-
-.search-input-wrapper input::placeholder {
-    color: #8190a0;
-    opacity: 1;
-}
-
-.search-input-wrapper button {
-    padding: 8px 14px;
-    border: 0;
-    border-radius: 5px;
-    background: #168cf0;
-    color: #fff;
-    font-family: "Inter", sans-serif;
-    font-size: 12px;
-    cursor: pointer;
-}
-
-#search-message {
-    grid-column: 1 / -1;
-    margin: 0;
-    color: #c62828;
-    font-family: "Space Mono", monospace;
-    font-size: 12px;
-    white-space: nowrap;
-}
-
-#search-message:empty {
-    display: none;
-}
+.search-form{display:flex;align-items:center;gap:12px;padding:12px 12px 12px 22px;border:2px solid var(--search-border);border-radius:12px;background:var(--surface);box-shadow:var(--shadow);transition:border-color .2s,box-shadow .2s}
+.search-icon{flex:none;color:var(--accent)}
+.search-form input{flex:1;min-width:0;height:40px;border:0;outline:0;background:transparent;color:var(--text);font-family:var(--font-mono);font-size:.875rem}
+.search-form input::placeholder{color:var(--muted)}
+.search-message{font-family:var(--font-mono);font-size:.75rem;font-weight:700;color:var(--danger);white-space:nowrap}
+.search-form button{height:44px;padding:0 24px;border:0;border-radius:8px;background:var(--accent);color:#fff;font-family:var(--font-mono);font-weight:700;font-size:.875rem;transition:background-color .2s,transform .2s}
