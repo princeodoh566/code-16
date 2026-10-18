@@ -12,3 +12,12 @@
 .theme-icon{display:grid;width:20px;height:20px;place-items:center}
 .theme-icon svg{width:20px;height:20px}flow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
 main{display:flex;flex-direction:column;gap:32px;padding-block:20px 70px}
+
+/* Search Component Styles :fuhad task 3.4 */
+
+.search-form{display:flex;align-items:center;gap:12px;padding:12px 12px 12px 22px;border:2px solid var(--search-border);border-radius:12px;background:var(--surface);box-shadow:var(--shadow);transition:border-color .2s,box-shadow .2s}
+.search-icon{flex:none;color:var(--accent)}
+.search-form input{flex:1;min-width:0;height:40px;border:0;outline:0;background:transparent;color:var(--text);font-family:var(--font-mono);font-size:.875rem}
+.search-form input::placeholder{color:var(--muted)}
+.search-message{font-family:var(--font-mono);font-size:.75rem;font-weight:700;color:var(--danger);white-space:nowrap}
+.search-form button{height:44px;padding:0 24px;border:0;border-radius:8px;background:var(--accent);color:#fff;font-family:var(--font-mono);font-weight:700;font-size:.875rem;transition:background-color .2s,transform .2s}
