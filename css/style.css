@@ -52,6 +52,18 @@ main{display:flex;flex-direction:column;gap:32px;padding-block:20px 70px}
 .search-form button{height:44px;padding:0 24px;border:0;border-radius:8px;background:var(--accent);color:#fff;font-family:var(--font-mono);font-weight:700;font-size:.875rem;transition:background-color .2s,transform .2s}
 
 
+/* ============== TABLE: Skipper (3.7) ========= */
+
+.table-section h2{margin-bottom:8px;font-size:1.75rem;line-height:1.4;color:var(--heading)}
+.table-intro{font-size:.9375rem;color:var(--muted)}
+.table-source{margin-block:20px 14px;font-size:.9375rem;font-weight:700;color:var(--text)}
+.table-wrapper{overflow:hidden;border:1px solid var(--tbl-outer);border-radius:14px}
+.planet-table{width:100%;border-collapse:collapse;font-size:.875rem;color:var(--tbl-text)}
+.planet-table th,.planet-table td{border:1px solid var(--tbl-line);padding:14px 10px;text-align:center}
+.planet-table th{background:var(--tbl-head);color:var(--tbl-head-text);font-weight:700}
+.planet-table td{background:var(--tbl-cell)}
+.planet-table td.group{background:var(--tbl-group);font-weight:700}
+.table-planet-button{border:0;background:transparent;color:inherit;font:inherit}
 /* ====== PLANET CARD: Olusegun (3.6) ====== */
 
 .planet-card{display:grid;grid-template-columns:110px 1fr;column-gap:20px;padding:40px 44px 44px;border-radius:14px;background:var(--surface);box-shadow:var(--shadow);font-family:var(--font-mono)}
