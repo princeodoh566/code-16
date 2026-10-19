@@ -1,81 +1,104 @@
-/* ===== DARK MODE: Nathanael (3.8) ===== */
+/* ===== VARIABLES: Prince (3.1) ===== */
+:root{
+  --font-main:"Inter",system-ui,sans-serif;
+  --font-mono:"Space Mono",monospace;
+  --page-bg:#f6f8ff;
+  --surface:#fff;
+  --inset:#f6f8ff;
+  --text:#141d2f;
+  --muted:#6b7faa;
+  --desc:#3f5d93;
+  --icon:#141d2f;
+  --accent:#0079ff;
+  --accent-hover:#5ba9ff;
+  --danger:#d93025;
+  --search-border:#e2e8f0;
+  --shadow:0 10px 30px rgba(20,29,47,.08);
+  --heading:#141d2f;
+  --tbl-head:#141d2f;
+  --tbl-head-text:#fff;
+  --tbl-group:#e2e8f0;
+  --tbl-cell:#fff;
+  --tbl-line:#e2e8f0;
+  --tbl-outer:#e2e8f0;
+  --tbl-text:#141d2f;
+}
 
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--page-bg);color:var(--text);font-family:var(--font-main);line-height:1.5}
+.page-container{width:min(1100px,92%);margin-inline:auto}
+.is-hidden{display:none !important}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ===== DARK MODE: Nathanael (3.8) ===== */
 body[data-theme="dark"]{
   --page-bg:#141d2f;--surface:#1e2a47;--inset:#141d2f;
   --text:#fff;--muted:#8fa9d6;--desc:#3f5d93;--icon:#fff;
   --accent-hover:#5ba9ff;--shadow:none;--search-border:#1e2a47;
   --heading:#fff;--tbl-head:#141d2f;--tbl-group:#8fa3d6;--tbl-cell:#f0f5ff;--tbl-outer:#fff;
+  --tbl-head-text:#fff;--tbl-line:#1e2a47;--tbl-text:#141d2f;
 }
 body[data-theme="dark"] .logo-text small{display:block}
 body[data-theme="dark"] .search-icon{color:#5ba9ff}
 body[data-theme="dark"] .site-footer h2,
 body[data-theme="dark"] .site-footer p{color:var(--text)}
+
+/* ===== HEADER: Adeola (3.2/2.2) ===== */
 .site-header{padding-block:30px 20px}
 .header-inner{display:flex;align-items:center;justify-content:space-between}
-.logo{display:inline-flex;align-items:center;gap:4px;color:var(--text)}
+.logo{display:inline-flex;align-items:center;gap:4px;color:var(--text);text-decoration:none}
 .logo-mark{width:84px;height:auto;flex:none}
 .logo-text{display:flex;flex-direction:column;line-height:1}
 .logo-text strong{font-size:2.25rem;font-weight:700;letter-spacing:-.06em;line-height:.9}
 .logo-text small{display:none;font-size:.5rem;letter-spacing:.3em;color:var(--muted);margin-top:4px;white-space:nowrap}
-.theme-toggle{display:inline-flex;align-items:center;gap:14px;padding:8px 12px;border:3px solid transparent;border-radius:10px;background:transparent;color:var(--muted)}
+.theme-toggle{display:inline-flex;align-items:center;gap:14px;padding:8px 12px;border:3px solid transparent;border-radius:10px;background:transparent;color:var(--muted);cursor:pointer}
 .theme-toggle-text{font-family:var(--font-mono);font-size:.8rem;font-weight:700;letter-spacing:.15em}
 .theme-icon{display:grid;width:20px;height:20px;place-items:center}
-.theme-icon svg{width:20px;height:20px}flow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
 main{display:flex;flex-direction:column;gap:32px;padding-block:20px 70px}
 
 /* ==== STATUS (loading and error): Blessing (3.5) ==== */
-.status-message {
-  padding: 1rem; /* provisional check spacing/600 in the figma */
-  border:  1px solid var(--search-border);/* needs 3.1 */
-  border-radius: 15px; /* figma says 15px not 12px */
-  background: var(--surface); /* needs 3.1 */
+.status-message{
+  padding:1rem;
+  border:1px solid var(--search-border);
+  border-radius:15px;
+  background:var(--surface);
+}
+.error-box{color:var(--danger)}
+.error-box p{margin-bottom:0.8rem}
+#retry-button{
+  padding:0.6rem 1.1rem;
+  border:0;
+  border-radius:8px;
+  background:var(--accent);
+  font-family:var(--font-mono);
+  font-weight:700;
+  font-size:0.875rem;
+  color:#fff;
+  cursor:pointer;
+  transition:background-color .2s, transform .2s;
 }
 
-
-.error-box {
-  color: var(--danger); /* needs 3.1 */
-}
-.error-box p{
-   margin-bottom: 0.8rem; /*provisional */
-}
-#retry-button {
-  padding: 0.6rem 1.1rem; /* provisional */
-  border: 0;
-  border-radius: 8px; /* needs 3.1 */
-  background: var(--accent); /* needs 3.1 */
-  font-family: var(--font-mono);
-  font-weight: 700;
-  font-size: 0.875rem;
-  color: #fff; 
-  transition: backgrround-color .2s,
-  transform .2s;
-}
-
-            
-/* Search Component Styles :fuhad task 3.4 */
-
-.search-form{display:flex;align-items:center;gap:12px;padding:12px 12px 12px 22px;border:2px solid var(--search-border);border-radius:12px;background:var(--surface);box-shadow:var(--shadow);transition:border-color .2s,box-shadow .2s}
+/* Search Component Styles : fuhad task 3.4 */
+.search-form{display:flex;align-items:center;gap:12px;padding:12px 12px 12px 22px;border:2px solid var(--search-border);border-radius:12px;background:var(--surface);box-shadow:var(--shadow);transition:border-color .2s,box-shadow .2s;flex-wrap:wrap}
 .search-icon{flex:none;color:var(--accent)}
 .search-form input{flex:1;min-width:0;height:40px;border:0;outline:0;background:transparent;color:var(--text);font-family:var(--font-mono);font-size:.875rem}
 .search-form input::placeholder{color:var(--muted)}
-.search-message{font-family:var(--font-mono);font-size:.75rem;font-weight:700;color:var(--danger);white-space:nowrap}
-.search-form button{height:44px;padding:0 24px;border:0;border-radius:8px;background:var(--accent);color:#fff;font-family:var(--font-mono);font-weight:700;font-size:.875rem;transition:background-color .2s,transform .2s}
-
+.search-message{width:100%;font-family:var(--font-mono);font-size:.75rem;font-weight:700;color:var(--danger);white-space:nowrap}
+.search-form button{height:44px;padding:0 24px;border:0;border-radius:8px;background:var(--accent);color:#fff;font-family:var(--font-mono);font-weight:700;font-size:.875rem;transition:background-color .2s,transform .2s;cursor:pointer}
 
 /* ============== TABLE: Skipper (3.7) ========= */
-
 .table-section h2{margin-bottom:8px;font-size:1.75rem;line-height:1.4;color:var(--heading)}
 .table-intro{font-size:.9375rem;color:var(--muted)}
 .table-source{margin-block:20px 14px;font-size:.9375rem;font-weight:700;color:var(--text)}
-.table-wrapper{overflow:hidden;border:1px solid var(--tbl-outer);border-radius:14px}
+.table-wrapper{overflow-x:auto;border:1px solid var(--tbl-outer);border-radius:14px}
 .planet-table{width:100%;border-collapse:collapse;font-size:.875rem;color:var(--tbl-text)}
 .planet-table th,.planet-table td{border:1px solid var(--tbl-line);padding:14px 10px;text-align:center}
 .planet-table th{background:var(--tbl-head);color:var(--tbl-head-text);font-weight:700}
 .planet-table td{background:var(--tbl-cell)}
 .planet-table td.group{background:var(--tbl-group);font-weight:700}
-.table-planet-button{border:0;background:transparent;color:inherit;font:inherit}
-/* ====== PLANET CARD: Olusegun (3.6) ====== */
+.table-planet-button{border:0;background:transparent;color:inherit;font:inherit;cursor:pointer}
 
+/* ====== PLANET CARD: Olusegun (3.6) ====== */
 .planet-card{display:grid;grid-template-columns:110px 1fr;column-gap:20px;padding:40px 44px 44px;border-radius:14px;background:var(--surface);box-shadow:var(--shadow);font-family:var(--font-mono)}
 .planet-card-image{grid-row:1 / span 4;width:96px;height:96px;margin-top:6px;border-radius:50%;object-fit:cover}
 .planet-card-info h3{font-size:1.5rem;line-height:1.3}
@@ -88,14 +111,17 @@ main{display:flex;flex-direction:column;gap:32px;padding-block:20px 70px}
 .planet-extra li{display:flex;align-items:center;gap:14px}
 .planet-extra svg{width:22px;height:22px;flex:none;color:var(--icon)}
 .planet-card.no-results{display:block;text-align:center;padding:40px 30px}
-.no-results h3{font-size:1.25rem;margin-bottom:12px}
-.no-results p{font-size:.9375rem;color:var(--muted)}
 
+/* ====== FOOTER: Blessing (2.7/3.3) ====== */
+.site-footer{padding-block:40px;border-top:1px solid var(--search-border)}
+.site-footer h2{font-size:1rem;margin-bottom:8px}
+.site-footer p{font-size:.875rem;color:var(--muted)}
+.footer-credit{margin-top:16px}
+.site-footer a{color:var(--accent)}
 
 /* ====== INTERACTION STATES (hover and focus) : olusegun (3.9) ====== */
 .theme-toggle:hover{color:var(--accent)}
 .theme-toggle:focus-visible{outline:none;border-color:var(--accent);color:var(--text)}
-.theme-toggle:focus-visible .theme-toggle-text{font-size:.85rem}
 .search-form:focus-within{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
 .search-form button:hover,#retry-button:hover{background:var(--accent-hover)}
 .search-form button:focus-visible,#retry-button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
