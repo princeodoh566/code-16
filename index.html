@@ -3,102 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Planet - Code 16</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Fixed path: was Style.css -->
+  <meta name="description" content="Explore planets in the solar system using live planet data." />
+  <title>Planet Explorer | Code 16</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body data-theme="light">
-  <div class="page-container">
-    <!-- HEADER: Adeola (3.2 / 2.2) -->
-    <header class="site-header">
-      <div class="header-inner">
-        <a href="#" class="logo" aria-label="Planet home">
-          <svg class="logo-mark" viewBox="0 0 100 40" fill="currentColor" aria-hidden="true">
-            <ellipse cx="30" cy="20" rx="18" ry="14" fill="none" stroke="currentColor" stroke-width="3"/>
-            <ellipse cx="30" cy="20" rx="28" ry="6" fill="none" stroke="currentColor" stroke-width="2" transform="rotate(-15 30 20)"/>
-            <circle cx="50" cy="6" r="3"/>
-          </svg>
-          <span class="logo-text">
-            <strong>planet</strong>
-            <small>CODE 16 PLANET EXPLORER</small>
-          </span>
-        </a>
 
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
-          <span class="theme-toggle-text">DARK</span>
-          <span class="theme-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          </span>
-        </button>
-      </div>
-    </header>
+  <!-- ===== HEADER: Adeola (2.2) ===== -->
+  <header class="site-header">
+    <div class="page-container header-inner">
+      <a class="logo" href="#top" aria-label="Planet Explorer home">
+        <svg class="logo-mark" viewBox="0 0 90 62" fill="none" aria-hidden="true">
+          <circle cx="45" cy="34" r="19" fill="currentColor"/>
+          <ellipse cx="42" cy="38" rx="40" ry="11" transform="rotate(-20 42 38)" stroke="currentColor" stroke-width="4.5"/>
+          <ellipse cx="42" cy="38" rx="32" ry="7" transform="rotate(-20 42 38)" stroke="var(--page-bg)" stroke-width="1.5"/>
+          <circle cx="57" cy="7" r="4.5" fill="currentColor"/><circle cx="66" cy="15" r="2.6" fill="currentColor"/>
+        </svg>
+        <span class="logo-text"><strong>planet</strong><small>creative world</small></span>
+      </a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <span class="theme-toggle-text">DARK</span>
+        <span class="theme-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
 
-    <main>
-      <!-- SEARCH: Fuhad (3.4) -->
-      <section aria-labelledby="search-heading">
-        <h2 id="search-heading" class="sr-only">Search for a planet</h2>
-        <form id="search-form" class="search-form" role="search">
-          <span class="search-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="6"/><path d="m21 21-4.3-4.3"/></svg>
-          </span>
-          <label for="search-input" class="sr-only">Search planet name</label>
-          <input id="search-input" type="search" placeholder="Search planet name..." autocomplete="off" />
-          <span id="search-message" class="search-message is-hidden" role="alert"></span>
-          <button type="submit">Search</button>
-        </form>
-      </section>
 
-      <!-- STATUS: Blessing (3.5) -->
-      <div id="loading-message" class="status-message">Loading planet data...</div>
-      
-      <div id="error-box" class="status-message error-box is-hidden" role="alert">
+  <main id="top" class="page-container">
+
+    <!-- ===== SEARCH: Fuhad (2.3) ===== -->
+    <section class="search-section" aria-label="Search planets">
+      <form id="search-form" class="search-form" novalidate>
+        <svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+          <path d="M16.5 16.5 21 21" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <label class="sr-only" for="planet-search">Search for a planet</label>
+        <input id="planet-search" name="planet" type="search" placeholder="Search planet name…" autocomplete="off" />
+        <p id="search-message" class="search-message" aria-live="polite"></p>
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+
+    <!-- ===== PLANET CARD, LOADING, ERROR: Christiana (2.4, 2.5) ===== -->
+    <section class="planet-section" aria-label="Planet information">
+      <div id="loading-state" class="status-message" aria-live="polite">Loading planet data…</div>
+      <div id="error-state" class="status-message error-box is-hidden" role="alert">
         <p>We could not load the planet data. Please check your internet connection and try again.</p>
-        <button id="retry-button" type="button">Try Again</button>
+        <button id="retry-button" type="button">Try again</button>
       </div>
+      <article id="planet-card" class="planet-card is-hidden"></article>
+    </section>
 
-      <!-- PLANET CARD: Olusegun (3.6) -->
-      <section id="planet-card-container" aria-live="polite"></section>
 
-      <!-- TABLE: Skipper (3.7) -->
-      <section class="table-section" aria-labelledby="facts-heading">
-        <h2 id="facts-heading">Planetary Facts at a Glance</h2>
-        <p class="table-intro">Below is a comparative table of major planets in our solar system. The data highlights key physical properties used by astronomers and researchers worldwide.</p>
-        <p class="table-source">Data about the planets of our solar system (Planetary facts taken from NASA)</p>
-        <div class="table-wrapper">
-          <table class="planet-table">
-            <thead>
-              <tr>
-                <th scope="col"><span class="sr-only">Planet category</span></th>
-                <th scope="col"><span class="sr-only">Planet subcategory</span></th>
-                <th scope="col">Name</th>
-                <th scope="col" class="col-mass">Mass (10<sup>24</sup> kg)</th>
-                <th scope="col">Diameter (km)</th>
-              </tr>
-            </thead>
-            <tbody id="planet-table-body">
-              <!-- rows injected by js/script.js -->
-            </tbody>
-          </table>
-        </div>
-      </section>
+    <!-- ===== TABLE: Skipper (2.6) ===== -->
+    <section class="table-section" aria-labelledby="table-heading">
+      <h2 id="table-heading">Planetary Facts at a Glance</h2>
+      <p class="table-intro">Below is a comparative table of major planets in our solar system. The data highlights key physical properties used by astronomers and researchers worldwide.</p>
+      <p class="table-source">Data about the planets of our solar system (Planetary facts taken from NASA)</p>
+      <div class="table-wrapper">
+        <table class="planet-table">
+          <thead>
+            <tr>
+              <th colspan="2" scope="col"><span class="sr-only">Group</span></th>
+              <th scope="col">Name</th>
+              <th scope="col" class="col-mass">Mass (10²⁴ kg)</th>
+              <th scope="col">Diameter (km)</th>
+            </tr>
+          </thead>
+          <tbody id="planet-table-body"></tbody>
+        </table>
+      </div>
+    </section>
 
-      <!-- ABOUT / FOOTER: Blessing (2.7 / 3.3) -->
-      <footer class="site-footer">
+  </main>
+
+
+  <!-- ===== FOOTER: Blessing (2.7) ===== -->
+  <footer class="site-footer">
+    <div class="page-container footer-inner">
+      <div>
         <h2>About</h2>
         <p>Code 16 team: Prince, Comfort, Adeola, Sheriff, Skipper, Nathanael, AbdulRasheed, Fuhad, Blessing, Olusegun, Olumide, Ummu-l-Khayr, Christiana, Muhammed-Awal and Memunat.</p>
-        <p class="footer-credit">
-          ©2026 Design by <a href="https://amakandukwu.com" target="_blank" rel="noopener noreferrer">Amaka N</a><br>
-          Built by <a href="https://github.com/princeodoh566/code-16" target="_blank" rel="noopener noreferrer">Code 16</a>.
-          All rights reserved <a href="https://tsacademyonline.com/" target="_blank" rel="noopener noreferrer">TSAcademy</a>
-        </p>
-      </footer>
-    </main>
-  </div>
+      </div>
+      <p class="footer-credit">
+        ©2026 Design by <a href="https://amakandukwu.com" target="_blank" rel="noopener noreferrer">Amaka N</a><br />
+        Built by <a href="REPO-URL-HERE" target="_blank" rel="noopener noreferrer">Code 16</a>. All rights reserved <a href="https://tsacademyonline.com/" target="_blank" rel="noopener noreferrer">TSAcademy</a>
+      </p>
+    </div>
+  </footer>
 
-  <!-- Fixed path: was Script.js -->
+
   <script src="js/script.js"></script>
 </body>
 </html>
