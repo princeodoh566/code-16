@@ -128,3 +128,33 @@ main{display:flex;flex-direction:column;gap:32px;padding-block:20px 70px}
 .table-planet-button:hover{text-decoration:underline}
 .table-planet-button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .site-footer a:hover{color:var(--accent);text-decoration:underline}
+
+/* ==== FOOTER: Blessing (3.12) ==== */
+.site-footer {
+  padding-block: 10px 60px;
+  background: var(-page-bg);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  color: var(--muted);
+}
+
+.site-footer h2 {
+  margin-bottom: 22px;
+  font-size: 1.0 6 2 5rem;
+  color: var(--muted);
+}
+
+.site-footer p {
+  font-size: .8 7 5rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.footer-credit {
+  max-width: 290px;
+  line-height: 1.5;
+}
