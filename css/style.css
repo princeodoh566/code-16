@@ -50,3 +50,21 @@ main{display:flex;flex-direction:column;gap:32px;padding-block:20px 70px}
 .search-form input::placeholder{color:var(--muted)}
 .search-message{font-family:var(--font-mono);font-size:.75rem;font-weight:700;color:var(--danger);white-space:nowrap}
 .search-form button{height:44px;padding:0 24px;border:0;border-radius:8px;background:var(--accent);color:#fff;font-family:var(--font-mono);font-weight:700;font-size:.875rem;transition:background-color .2s,transform .2s}
+
+
+/* ====== PLANET CARD: Olusegun (3.6) ====== */
+
+.planet-card{display:grid;grid-template-columns:110px 1fr;column-gap:20px;padding:40px 44px 44px;border-radius:14px;background:var(--surface);box-shadow:var(--shadow);font-family:var(--font-mono)}
+.planet-card-image{grid-row:1 / span 4;width:96px;height:96px;margin-top:6px;border-radius:50%;object-fit:cover}
+.planet-card-info h3{font-size:1.5rem;line-height:1.3}
+.planet-type{font-size:.875rem;color:var(--accent)}
+.planet-description{margin-block:18px;font-size:.8125rem;line-height:1.6;color:var(--desc)}
+.planet-primary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:16px 22px;border-radius:8px;background:var(--inset)}
+.planet-primary dt{font-size:.75rem;color:var(--muted)}
+.planet-primary dd{font-size:1.25rem;font-weight:700;color:var(--text)}
+.planet-extra{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;margin-top:20px;font-size:.8125rem;color:var(--muted)}
+.planet-extra li{display:flex;align-items:center;gap:14px}
+.planet-extra svg{width:22px;height:22px;flex:none;color:var(--icon)}
+.planet-card.no-results{display:block;text-align:center;padding:40px 30px}
+.no-results h3{font-size:1.25rem;margin-bottom:12px}
+.no-results p{font-size:.9375rem;color:var(--muted)}
