@@ -10,3 +10,83 @@ body[data-theme="dark"] .logo-text small{display:block}
 body[data-theme="dark"] .search-icon{color:#5ba9ff}
 body[data-theme="dark"] .site-footer h2,
 body[data-theme="dark"] .site-footer p{color:var(--text)}
+.site-header{padding-block:30px 20px}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{display:inline-flex;align-items:center;gap:4px;color:var(--text)}
+.logo-mark{width:84px;height:auto;flex:none}
+.logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-text strong{font-size:2.25rem;font-weight:700;letter-spacing:-.06em;line-height:.9}
+.logo-text small{display:none;font-size:.5rem;letter-spacing:.3em;color:var(--muted);margin-top:4px;white-space:nowrap}
+.theme-toggle{display:inline-flex;align-items:center;gap:14px;padding:8px 12px;border:3px solid transparent;border-radius:10px;background:transparent;color:var(--muted)}
+.theme-toggle-text{font-family:var(--font-mono);font-size:.8rem;font-weight:700;letter-spacing:.15em}
+.theme-icon{display:grid;width:20px;height:20px;place-items:center}
+.theme-icon svg{width:20px;height:20px}flow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+main{display:flex;flex-direction:column;gap:32px;padding-block:20px 70px}
+
+/* ==== STATUS (loading and error): Blessing (3.5) ==== */
+.status-message {
+  padding: 1rem; /* provisional check spacing/600 in the figma */
+  border:  1px solid var(--search-border);/* needs 3.1 */
+  border-radius: 15px; /* figma says 15px not 12px */
+  background: var(--surface); /* needs 3.1 */
+}
+
+
+.error-box {
+  color: var(--danger); /* needs 3.1 */
+}
+.error-box p{
+   margin-bottom: 0.8rem; /*provisional */
+}
+#retry-button {
+  padding: 0.6rem 1.1rem; /* provisional */
+  border: 0;
+  border-radius: 8px; /* needs 3.1 */
+  background: var(--accent); /* needs 3.1 */
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #fff; 
+  transition: backgrround-color .2s,
+  transform .2s;
+}
+
+            
+/* Search Component Styles :fuhad task 3.4 */
+
+.search-form{display:flex;align-items:center;gap:12px;padding:12px 12px 12px 22px;border:2px solid var(--search-border);border-radius:12px;background:var(--surface);box-shadow:var(--shadow);transition:border-color .2s,box-shadow .2s}
+.search-icon{flex:none;color:var(--accent)}
+.search-form input{flex:1;min-width:0;height:40px;border:0;outline:0;background:transparent;color:var(--text);font-family:var(--font-mono);font-size:.875rem}
+.search-form input::placeholder{color:var(--muted)}
+.search-message{font-family:var(--font-mono);font-size:.75rem;font-weight:700;color:var(--danger);white-space:nowrap}
+.search-form button{height:44px;padding:0 24px;border:0;border-radius:8px;background:var(--accent);color:#fff;font-family:var(--font-mono);font-weight:700;font-size:.875rem;transition:background-color .2s,transform .2s}
+
+
+/* ============== TABLE: Skipper (3.7) ========= */
+
+.table-section h2{margin-bottom:8px;font-size:1.75rem;line-height:1.4;color:var(--heading)}
+.table-intro{font-size:.9375rem;color:var(--muted)}
+.table-source{margin-block:20px 14px;font-size:.9375rem;font-weight:700;color:var(--text)}
+.table-wrapper{overflow:hidden;border:1px solid var(--tbl-outer);border-radius:14px}
+.planet-table{width:100%;border-collapse:collapse;font-size:.875rem;color:var(--tbl-text)}
+.planet-table th,.planet-table td{border:1px solid var(--tbl-line);padding:14px 10px;text-align:center}
+.planet-table th{background:var(--tbl-head);color:var(--tbl-head-text);font-weight:700}
+.planet-table td{background:var(--tbl-cell)}
+.planet-table td.group{background:var(--tbl-group);font-weight:700}
+.table-planet-button{border:0;background:transparent;color:inherit;font:inherit}
+/* ====== PLANET CARD: Olusegun (3.6) ====== */
+
+.planet-card{display:grid;grid-template-columns:110px 1fr;column-gap:20px;padding:40px 44px 44px;border-radius:14px;background:var(--surface);box-shadow:var(--shadow);font-family:var(--font-mono)}
+.planet-card-image{grid-row:1 / span 4;width:96px;height:96px;margin-top:6px;border-radius:50%;object-fit:cover}
+.planet-card-info h3{font-size:1.5rem;line-height:1.3}
+.planet-type{font-size:.875rem;color:var(--accent)}
+.planet-description{margin-block:18px;font-size:.8125rem;line-height:1.6;color:var(--desc)}
+.planet-primary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:16px 22px;border-radius:8px;background:var(--inset)}
+.planet-primary dt{font-size:.75rem;color:var(--muted)}
+.planet-primary dd{font-size:1.25rem;font-weight:700;color:var(--text)}
+.planet-extra{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;margin-top:20px;font-size:.8125rem;color:var(--muted)}
+.planet-extra li{display:flex;align-items:center;gap:14px}
+.planet-extra svg{width:22px;height:22px;flex:none;color:var(--icon)}
+.planet-card.no-results{display:block;text-align:center;padding:40px 30px}
+.no-results h3{font-size:1.25rem;margin-bottom:12px}
+.no-results p{font-size:.9375rem;color:var(--muted)}
