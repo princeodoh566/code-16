@@ -1,5 +1,15 @@
-/* ===== HEADER: Nathanael (3.2) ===== */
+/* ===== DARK MODE: Nathanael (3.8) ===== */
 
+body[data-theme="dark"]{
+  --page-bg:#141d2f;--surface:#1e2a47;--inset:#141d2f;
+  --text:#fff;--muted:#8fa9d6;--desc:#3f5d93;--icon:#fff;
+  --accent-hover:#5ba9ff;--shadow:none;--search-border:#1e2a47;
+  --heading:#fff;--tbl-head:#141d2f;--tbl-group:#8fa3d6;--tbl-cell:#f0f5ff;--tbl-outer:#fff;
+}
+body[data-theme="dark"] .logo-text small{display:block}
+body[data-theme="dark"] .search-icon{color:#5ba9ff}
+body[data-theme="dark"] .site-footer h2,
+body[data-theme="dark"] .site-footer p{color:var(--text)}
 .site-header{padding-block:30px 20px}
 .header-inner{display:flex;align-items:center;justify-content:space-between}
 .logo{display:inline-flex;align-items:center;gap:4px;color:var(--text)}
