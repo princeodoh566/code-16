@@ -37,3 +37,6 @@ async function fetchPlanets() {
   }
 }
 
+/* ===== LOADING STATE: Skipper (4.2) ===== */
+function showLoading() { loadingState.classList.remove("is-hidden"); }
+function hideLoading() { loadingState.classList.add("is-hidden"); }
