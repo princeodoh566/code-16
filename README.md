@@ -11,21 +11,21 @@ Design: Amaka N (Figma mockup). Built for the TS Academy capstone project.
 ## Team
 | Member | GitHub |
 |---|---|
-| Prince (Team Lead) | [princeodoh566](https://github.com/princeodoh566) |
-| Comfort (Assistant Team Lead) | [Macomi27](https://github.com/Macomi27) |
-| Adeola | [Mr-Adeola](https://github.com/Mr-Adeola) |
-| Sheriff | [allabouttobi](https://github.com/allabouttobi) |
-| Skipper | [harrydev-pro](https://github.com/harrydev-pro) |
-| Nathanael | [Nathanaelfowler](https://github.com/Nathanaelfowler) |
-| AbdulRasheed | [abdrash-beep](https://github.com/abdrash-beep) |
-| Fuhad | [Adexstar](https://github.com/Adexstar) |
-| Blessing | [OLaditiblessing28](https://github.com/OLaditiblessing28) |
-| Olusegun | [Obasprince](https://github.com/Obasprince) |
-| Olumide | [OfficialBambam-Olumide](https://github.com/OfficialBambam-Olumide) |
-| Ummu-l-Khayr | [Riiree](https://github.com/Riiree) |
-| Christiana | [tiana9495-debug](https://github.com/tiana9495-debug) |
-| Muhammed-Awal | [Focus-06](https://github.com/Focus-06) |
-| Memunat | [Memunat-hub](https://github.com/Memunat-hub) |
+| Prince Kalu Odoh (Team Lead) | [princeodoh566](https://github.com/princeodoh566) |
+| Ma Comfort Itcham Sama (Assistant Team Lead) | [Macomi27](https://github.com/Macomi27) |
+| ⁠Alli Adeola Rofeeq | [Mr-Adeola](https://github.com/Mr-Adeola) |
+| Adedotun sheriff | [allabouttobi](https://github.com/allabouttobi) |
+| Badewa razaq | [harrydev-pro](https://github.com/harrydev-pro) |
+| Fowler Nathanael Araoluwa | [Nathanaelfowler](https://github.com/Nathanaelfowler) |
+| AbdulRasheed Ahmed | [abdrash-beep](https://github.com/abdrash-beep) |
+| ⁠Fuhad Shittu | [Adexstar](https://github.com/Adexstar) |
+| Blessing Oladiti | [OLaditiblessing28](https://github.com/OLaditiblessing28) |
+| Obakunle Olusegun | [Obasprince](https://github.com/Obasprince) |
+| Eyitayo Olumide | [OfficialBambam-Olumide](https://github.com/OfficialBambam-Olumide) |
+| Ummu-l-khayr Lawal | [Riiree](https://github.com/Riiree) |
+| ⁠Ajayi Ifeoluwa Christiana | [tiana9495-debug](https://github.com/tiana9495-debug) |
+| Akinbami Muhammed-Awal | [Focus-06](https://github.com/Focus-06) |
+| Akinwunmi Memunat Oyindamola | [Memunat-hub](https://github.com/Memunat-hub) |
 
 ## Components and who worked on them
 | Component / function | Who worked on it | Status |
